@@ -21,7 +21,28 @@ const reducer = (state, action) => {
 };
 
 const Stopwatch = () => {
-	return <div>Stopwatch</div>;
+	const [state, dispatch] = useReducer(reducer, initialStateValue);
+
+	const idRef = useRef(0);
+
+	useEffect(() => {
+		if (!state.isRunning) {
+			return;
+		}
+		idRef.current = setInterval(() => dispatch({ type: "tick" }), 1000);
+
+		//CleanUp function
+		return () => {
+			clearInterval(idRef.current);
+			idRef.current = 0;
+		};
+	}, [state.isRunning]);
+
+	return (
+		<>
+			<h1></h1>
+		</>
+	);
 };
 
 export default Stopwatch;
