@@ -40,7 +40,20 @@ const Stopwatch = () => {
 
 	return (
 		<>
-			<h1></h1>
+			<>
+				<h1>StopWatch</h1>
+
+				<h1>{state.time}</h1>
+
+				<button onClick={() => dispatch({ type: "start" })}>Start</button>
+				<button
+					style={{ margin: "0px 20px" }}
+					onClick={() => dispatch({ type: "stop" })}
+				>
+					Stop
+				</button>
+				<button onClick={() => dispatch({ type: "reset" })}>ReSet</button>
+			</>
 		</>
 	);
 };
