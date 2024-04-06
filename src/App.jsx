@@ -8,7 +8,7 @@ import ComponentC from "./Components/ExerciseTwo Reducer and Context/ComponentC"
 const App = () => {
 	return (
 		<>
-			<ComponentA />
+			<ComponentA text={"Hello"} />
 			<p>
 				-----------------------------------------------------------------------------------
 			</p>

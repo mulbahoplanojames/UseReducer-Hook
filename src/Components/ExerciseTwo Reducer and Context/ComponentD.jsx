@@ -11,6 +11,9 @@ const ComponentD = () => {
 			<button onClick={() => counterContext.dispatch("increment")}>
 				Increment
 			</button>
+			<button onClick={() => counterContext.dispatch("incrementTwo")}>
+				IncrementTwo
+			</button>
 			<button onClick={() => counterContext.dispatch("decrement")}>
 				Decrement
 			</button>

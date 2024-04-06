@@ -14,7 +14,12 @@ const UseState = () => {
 			<h2>Count - {count}</h2>
 			<button
 				style={styled}
-				onClick={() => setCount((prevCount) => prevCount + 1)}
+				onClick={() =>
+					setCount((prevCount) => {
+						prevCount + 1;
+						console.log(prevCount + 1);
+					})
+				}
 			>
 				Increment
 			</button>

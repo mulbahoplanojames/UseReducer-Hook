@@ -9,6 +9,8 @@ const reducer = (state, action) => {
 	switch (action) {
 		case "increment":
 			return state + 1;
+		case "incrementTwo":
+			return state + 5;
 		case "decrement":
 			return state - 1;
 		case "reset":
